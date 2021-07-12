@@ -1,12 +1,25 @@
 ﻿body {
     background-color: ButtonFace;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 h1 {
     text-align: center;
     border: 1px dotted #000;
     padding: 8px;
+    font-size: 100px;
 }
 
-h2 {
-    color: black;
+.subtitulo{
+    font-size:45px;
 }
+/* Esto es para centrar video
+nombreCualquiera {
+    display: block;
+    margin: 0 auto;
+}
+*/
