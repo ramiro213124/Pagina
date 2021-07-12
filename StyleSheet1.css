@@ -17,6 +17,30 @@ h1 {
 .subtitulo{
     font-size:45px;
 }
+
+
+/* Podemos eliminar este estilo si no queremos que se adapte al ancho máximo */
+.delimitador {
+    width: 560px; /* Ancho máximo */
+    margin: auto; /* Centramos el vídeo */
+}
+/* El contenedor con el padding-top crea el tamaño del vídeo */
+.contenedor {
+    height: 0px;
+    width: 100%;
+    padding-top: 56.25%; /* Relación: 16/9 = 56.25% */
+    position: relative;
+}
+    /* El iframe se adapta al tamaño del contenedor */
+    .contenedor iframe {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+
+
 /* Esto es para centrar video
 nombreCualquiera {
     display: block;
