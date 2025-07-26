@@ -60,17 +60,39 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  width: 60px;
+  height: 60px;
   background-color: #25D366;
-  color: white;
-  font-size: 28px;
-  text-align: center;
-  padding: 12px 16px;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  text-decoration: none;
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
 }
 
 .whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
+.boton-principal {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.boton-principal:hover {
   background-color: #1ebe5d;
 }
