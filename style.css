@@ -45,7 +45,7 @@ header p {
     header p {
         font-size: 1.3em; /* Subtítulo más grande en PC */
     }
-
+ 
     /* Ajustes para el MAIN en PC (mantienes los que ya tenías) */
     main {
         max-width: 960px;
