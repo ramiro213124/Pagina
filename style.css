@@ -6,9 +6,9 @@
     color: #333;
 }
 
-/* --- NUEVO ESTILO PARA EL ENCABEZADO TIPO HUNTER --- */
+/* --- ESTILO PARA EL ENCABEZADO SUPERIOR (MARCA Y NAVEGACIÓN) --- */
 header {
-    background: #333; /* Un fondo oscuro como el de Hunter */
+    background: #1e6b47; /* Un verde más oscuro para el encabezado superior */
     color: white;
     padding: 1rem 2rem; /* Padding superior/inferior y a los lados */
 }
@@ -51,10 +51,10 @@ nav.main-nav ul li a {
 }
 
 nav.main-nav ul li a:hover {
-    color: #2e8b57; /* Un toque de tu color al pasar el ratón */
+    color: #a4e1bc; /* Un tono más claro para el hover en el encabezado oscuro */
 }
 
-/* --- MEDIA QUERIES PARA EL ENCABEZADO (PARA MEJOR RESPONSIVIDAD) --- */
+/* --- MEDIA QUERIES PARA EL ENCABEZADO SUPERIOR (PARA MEJOR RESPONSIVIDAD) --- */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column; /* Apila en móvil (marca arriba, nav abajo) */
@@ -78,42 +78,61 @@ nav.main-nav ul li a:hover {
     }
 }
 
-/* --- Estilo para el nuevo encabezado dentro de MAIN --- */
+/* --- Estilo para el ENCABEZADO DENTRO DE MAIN (TÍTULO PRINCIPAL) --- */
 .main-page-header {
+    background: #2e8b57; /* El verde original de SmartRiego, más claro */
+    color: white;
     text-align: center;
-    padding: 2rem;
-    max-width: 960px;
-    margin: 2rem auto;
+    padding: 3rem 2rem; /* Más padding para que el título respire */
+    /* Estas propiedades ya lo hacen ocupar todo el ancho por defecto */
+    /* max-width: none;  <-- No es necesario, un div por defecto ocupa el 100% */
+    /* margin: 0;        <-- No es necesario, un div por defecto no tiene margen externo */
 }
 
 .main-page-header h1 {
-    font-size: 2.5em; /* Ajustado para ser el título principal de la página */
+    font-size: 2.8em; /* Tamaño del título principal */
     margin-bottom: 0.5rem;
 }
 
 .main-page-header p {
-    font-size: 1.1em;
-    color: #666;
+    font-size: 1.2em;
+    opacity: 0.9;
 }
+
+/* --- MEDIA QUERY para main-page-header en pantallas más grandes (PC) --- */
+@media (min-width: 768px) {
+    .main-page-header h1 {
+        font-size: 3.5em; /* Título aún más grande en PC */
+    }
+
+    .main-page-header p {
+        font-size: 1.5em; /* Subtítulo más grande en PC */
+    }
+}
+
 
 /* --- SECCIONES PRINCIPALES --- */
 main {
-    padding: 2rem; /* Mantén el padding actual para móvil */
-    max-width: 960px; /* Asegura el ancho máximo y centrado para main */
-    margin: 0 auto; /* Centra main */
+    padding: 0; /* Quitamos el padding global de main para que .main-page-header ocupe el 100% */
+    max-width: none; /* Asegura que main pueda expandirse completamente */
+    margin: 0; /* Elimina margen de main */
 }
 
+/* Las secciones internas ahora tendrán su propio max-width y margin para centrarse */
 section {
     margin-bottom: 2rem;
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease; /* Transición para efecto hover en secciones */
+    transition: box-shadow 0.3s ease;
+    max-width: 960px; /* Ancho máximo para el contenido de las secciones */
+    margin-left: auto; /* Centra la sección */
+    margin-right: auto; /* Centra la sección */
 }
 
 section:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra más grande al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 /* --- LISTAS Y ÍCONOS (VENTAJAS DEL SISTEMA) --- */
@@ -122,29 +141,28 @@ ul {
     padding: 0;
 }
 
-/* Estilo para los íconos de Font Awesome en las listas */
 ul li i {
-    margin-right: 0.7rem; /* Espacio entre el ícono y el texto */
-    color: #2e8b57;       /* Le da a los íconos el color verde de tu encabezado */
-    font-size: 1.1em;     /* Un poco más grande que el texto */
-    min-width: 1.2em;     /* Asegura que todos los íconos tengan el mismo ancho para una mejor alineación */
-    text-align: center;   /* Centra el ícono dentro de su min-width */
+    margin-right: 0.7rem;
+    color: #2e8b57;
+    font-size: 1.1em;
+    min-width: 1.2em;
+    text-align: center;
 }
 
 
 /* --- IMÁGENES DE LA APP --- */
 #app img {
-    max-width: 100%; /* Las imágenes no se desbordan */
-    height: auto;    /* Mantiene la proporción */
-    display: block;  /* Para que `margin: auto` funcione */
-    margin: 1rem auto; /* Centra las imágenes */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
 }
 
 /* --- BOTONES --- */
 .whatsapp-btn,
 .boton-principal,
 .whatsapp-float {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones para todos los elementos interactivos */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .whatsapp-btn {
@@ -161,8 +179,8 @@ ul li i {
 
 .whatsapp-btn:hover {
     background-color: #1ebe5d;
-    transform: scale(1.03); /* Ligeramente más grande */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp-float {
@@ -187,8 +205,8 @@ ul li i {
 
 .whatsapp-float:hover {
     background-color: #1ebe5d;
-    transform: scale(1.08); /* Ligeramente más grande */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .boton-principal {
@@ -206,8 +224,8 @@ ul li i {
 
 .boton-principal:hover {
     background-color: #1ebe5d;
-    transform: scale(1.03); /* Ligeramente más grande */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* --- FOOTER --- */
