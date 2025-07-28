@@ -6,58 +6,101 @@
     color: #333;
 }
 
-/* --- ESTILOS GENERALES DEL HEADER --- */
+/* --- NUEVO ESTILO PARA EL ENCABEZADO TIPO HUNTER --- */
 header {
-    background: #2e8b57;
+    background: #333; /* Un fondo oscuro como el de Hunter */
     color: white;
-    padding: 2rem 1rem; /* Padding para el header completo */
-    text-align: center; /* Centra el texto del header */
+    padding: 1rem 2rem; /* Padding superior/inferior y a los lados */
 }
 
-/* El header-text-content ahora contendrá todo el header */
-.header-text-content {
-    max-width: 960px; /* Limita el ancho del contenido del header en pantallas grandes */
-    margin: 0 auto; /* Centra el contenido del header */
-    /* text-align: center; /* Esto ya lo maneja el 'header' directamente, pero no estorba */
+.header-container {
+    display: flex; /* Alinea los elementos en fila */
+    justify-content: space-between; /* Espacio entre marca y navegación */
+    align-items: center; /* Centra verticalmente los elementos */
+    max-width: 1200px; /* Ancho máximo del encabezado */
+    margin: 0 auto; /* Centra el encabezado */
 }
 
-header h1 {
-    font-size: 2.2em; /* Tamaño del título en móvil */
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
+.branding .logo-link {
+    display: inline-flex; /* Para alinear logo y texto si lo tuvieras */
+    align-items: center;
+    text-decoration: none;
+    color: white;
 }
 
-header p {
-    font-size: 1.1em; /* Tamaño del subtítulo en móvil */
-    opacity: 0.9;
+.branding .brand-name {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-/* --- Media Query para pantallas más grandes (PC) --- */
-@media (min-width: 768px) {
+nav.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinea los ítems del menú en fila */
+}
+
+nav.main-nav ul li {
+    margin-left: 1.5rem; /* Espacio entre los ítems del menú */
+}
+
+nav.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav.main-nav ul li a:hover {
+    color: #2e8b57; /* Un toque de tu color al pasar el ratón */
+}
+
+/* --- MEDIA QUERIES PARA EL ENCABEZADO (PARA MEJOR RESPONSIVIDAD) --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Apila en móvil (marca arriba, nav abajo) */
+        align-items: center; /* Centra horizontalmente en móvil */
+        text-align: center; /* Asegura que el texto esté centrado */
+    }
+
+    nav.main-nav ul {
+        flex-direction: column; /* Apila los links del menú en móvil */
+        margin-top: 1rem;
+    }
+
+    nav.main-nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Ajuste para el padding del header en móvil para que no sea excesivo */
     header {
-        padding: 3rem 2rem; /* Más padding para el header en PC */
-    }
-
-    header h1 {
-        font-size: 3em; /* Título más grande en PC */
-    }
-
-    header p {
-        font-size: 1.3em; /* Subtítulo más grande en PC */
-    }
-
-    /* Ajustes para el MAIN en PC (mantienes los que ya tenías) */
-    main {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 2rem;
+        padding: 1rem 1rem;
     }
 }
 
+/* --- Estilo para el nuevo encabezado dentro de MAIN --- */
+.main-page-header {
+    text-align: center;
+    padding: 2rem;
+    max-width: 960px;
+    margin: 2rem auto;
+}
+
+.main-page-header h1 {
+    font-size: 2.5em; /* Ajustado para ser el título principal de la página */
+    margin-bottom: 0.5rem;
+}
+
+.main-page-header p {
+    font-size: 1.1em;
+    color: #666;
+}
 
 /* --- SECCIONES PRINCIPALES --- */
 main {
     padding: 2rem; /* Mantén el padding actual para móvil */
+    max-width: 960px; /* Asegura el ancho máximo y centrado para main */
+    margin: 0 auto; /* Centra main */
 }
 
 section {
@@ -87,10 +130,6 @@ ul li i {
     min-width: 1.2em;     /* Asegura que todos los íconos tengan el mismo ancho para una mejor alineación */
     text-align: center;   /* Centra el ícono dentro de su min-width */
 }
-/* Asegúrate de ELIMINAR la siguiente regla si existe en tu CSS: */
-/* ul li::before {
-    content: "✅ ";
-} */
 
 
 /* --- IMÁGENES DE LA APP --- */
@@ -141,7 +180,7 @@ ul li i {
     z-index: 1000;
 }
 
-.whatsapp-float svg { /* Estilo para el SVG, no para la etiqueta <img> */
+.whatsapp-float svg {
     width: 32px;
     height: 32px;
 }
