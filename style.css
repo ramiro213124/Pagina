@@ -18,7 +18,7 @@ header {
 .header-text-content {
     max-width: 960px; /* Limita el ancho del contenido del header en pantallas grandes */
     margin: 0 auto; /* Centra el contenido del header */
-    text-align: center; /* Asegura que el texto esté centrado */
+    /* text-align: center; /* Esto ya lo maneja el 'header' directamente, pero no estorba */
 }
 
 header h1 {
