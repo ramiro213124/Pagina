@@ -96,3 +96,20 @@ footer {
 .boton-principal:hover {
   background-color: #1ebe5d;
 }
+
+/* Add this to your style.css */
+
+main {
+    padding: 2rem;
+    /* Add these new rules below */
+    max-width: 960px; /* Or any max-width you prefer, e.g., 1200px */
+    margin: 0 auto; /* This centers the block-level element */
+}
+
+/* Make images responsive within their containers */
+#app img {
+    max-width: 100%; /* Ensures images don't overflow their parent */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below images */
+    margin: 1rem auto; /* Centers images within their container */
+}
