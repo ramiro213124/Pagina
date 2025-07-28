@@ -10,81 +10,43 @@
 header {
     background: #2e8b57;
     color: white;
-    padding: 1rem 0; /* Padding superior/inferior, 0 a los lados */
-    text-align: center; /* Por si el texto está solo en móvil, que se centre */
+    padding: 2rem 1rem; /* Padding para el header completo */
+    text-align: center; /* Centra el texto del header */
 }
 
-.header-container {
-    display: flex; /* Usa Flexbox para alinear el logo y el texto */
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: center; /* Centra el contenido en pantallas pequeñas por defecto */
-    padding: 0 1rem; /* Un poco de padding a los lados para móvil */
-    max-width: 1000px; /* Limita el ancho del contenido del header */
-    margin: 0 auto; /* Centra el container del header */
-    gap: 1rem; /* Espacio entre el logo y el texto */
-}
-
-.header-logo-left {
-    width: 60px; /* Tamaño del logo para móvil */
-    height: 60px;
-    min-width: 60px; /* Asegura que no se haga más chico que esto */
-    animation: fadeInScale 0.8s ease-out forwards; /* Animación de entrada más suave */
-}
-
+/* El header-text-content ahora contendrá todo el header */
 .header-text-content {
-    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
-    text-align: center; /* Por defecto, el texto centrado en móvil */
+    max-width: 960px; /* Limita el ancho del contenido del header en pantallas grandes */
+    margin: 0 auto; /* Centra el contenido del header */
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
 header h1 {
-    font-size: 1.8em; /* Tamaño del título en móvil */
-    margin-bottom: 0.3rem; /* Menos espacio debajo del título */
+    font-size: 2.2em; /* Tamaño del título en móvil */
+    margin-bottom: 0.5rem;
     line-height: 1.2;
 }
 
 header p {
-    font-size: 0.9em; /* Tamaño del subtítulo en móvil */
+    font-size: 1.1em; /* Tamaño del subtítulo en móvil */
     opacity: 0.9;
-}
-
-/* --- Animación de entrada para el logo --- */
-@keyframes fadeInScale {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
 }
 
 /* --- Media Query para pantallas más grandes (PC) --- */
 @media (min-width: 768px) {
-    .header-container {
-        justify-content: flex-start; /* Alinea el contenido a la izquierda en PC */
-        padding: 0 2rem; /* Más padding a los lados en PC */
-        gap: 1.5rem; /* Más espacio entre el logo y el texto en PC */
-    }
-
-    .header-logo-left {
-        width: 80px; /* Logo más grande en PC */
-        height: 80px;
-    }
-
-    .header-text-content {
-        text-align: left; /* Alinea el texto a la izquierda en PC */
+    header {
+        padding: 3rem 2rem; /* Más padding para el header en PC */
     }
 
     header h1 {
-        font-size: 2.5em; /* Título más grande en PC */
+        font-size: 3em; /* Título más grande en PC */
     }
 
     header p {
-        font-size: 1.1em; /* Subtítulo más grande en PC */
+        font-size: 1.3em; /* Subtítulo más grande en PC */
     }
 
-    /* Ajustes para el MAIN en PC */
+    /* Ajustes para el MAIN en PC (mantienes los que ya tenías) */
     main {
         max-width: 960px;
         margin: 0 auto;
