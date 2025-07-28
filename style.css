@@ -1,236 +1,110 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f3f3f3;
-    color: #333;
-}
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartRiego – Controlador de Riego Wi-Fi</title>
 
-/* --- ESTILO PARA EL ENCABEZADO SUPERIOR (MARCA Y NAVEGACIÓN) --- */
-header {
-    background: #1e6b47; /* Un verde más oscuro para el encabezado superior */
-    color: white;
-    padding: 1rem 2rem; /* Padding superior/inferior y a los lados */
-}
+  <!-- SEO -->
+  <meta name="description" content="Controlá el riego de tu jardín desde cualquier lugar con SmartRiego. Nuestro controlador Wi-Fi ofrece máxima eficiencia, simplicidad y tecnología.">
+  <meta name="keywords" content="riego Wi-Fi, controlador de riego, riego automático, smart garden, jardinería inteligente, riego con app">
 
-.header-container {
-    display: flex; /* Alinea los elementos en fila */
-    justify-content: space-between; /* Espacio entre marca y navegación */
-    align-items: center; /* Centra verticalmente los elementos */
-    max-width: 1200px; /* Ancho máximo del encabezado */
-    margin: 0 auto; /* Centra el encabezado */
-}
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon-32x32.png" />
 
-.branding .logo-link {
-    display: inline-flex; /* Para alinear logo y texto si lo tuvieras */
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
+  <!-- Meta redes sociales -->
+  <meta property="og:title" content="SmartRiego – Riego Wi-Fi Inteligente">
+  <meta property="og:description" content="Automatizá tu riego con nuestra app exclusiva.">
+  <meta property="og:image" content="https://ramiro213124.github.io/smartriego/interfaz-app.jpg">
+  <meta property="og:url" content="https://ramiro213124.github.io/smartriego/">
+  <meta name="twitter:card" content="summary_large_image">
 
-.branding .brand-name {
-    font-size: 1.5em;
-    font-weight: bold;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css"/>
 
-nav.main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Alinea los ítems del menú en fila */
-}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TCFZTC9TEH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TCFZTC9TEH');
+  </script>
+</head>
 
-nav.main-nav ul li {
-    margin-left: 1.5rem; /* Espacio entre los ítems del menú */
-}
+<body>
+<header>
+    <div class="header-container">
+        <div class="branding">
+            <a href="#" class="logo-link">
+                <span class="brand-name">SmartRiego</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#ventajas">Ventajas</a></li>
+                <li><a href="#app">App</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+</header>
 
-nav.main-nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+  <main>
+      <header class="main-page-header">
+        <h1>Controlador de Riego Wi-Fi Inteligente</h1>
+        <p>Modernizá tu riego con la mejor tecnología.</p>
+    </header>
 
-nav.main-nav ul li a:hover {
-    color: #a4e1bc; /* Un tono más claro para el hover en el encabezado oscuro */
-}
+    <section id="descripcion">
+        <h2>¿Qué ofrecemos?</h2>
+        <p>
+            Te presentamos un controlador de riego Wi-Fi que mejora notablemente la experiencia frente a los sistemas tradicionales.
+            Nuestro dispositivo se conecta a Internet y se administra fácilmente desde una app con un sistema exclusivo desarrollado por nosotros.
+        </p>
+    </section>
 
-/* --- MEDIA QUERIES PARA EL ENCABEZADO SUPERIOR (PARA MEJOR RESPONSIVIDAD) --- */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column; /* Apila en móvil (marca arriba, nav abajo) */
-        align-items: center; /* Centra horizontalmente en móvil */
-        text-align: center; /* Asegura que el texto esté centrado */
-    }
+    <section id="ventajas">
+      <h2>Ventajas del sistema</h2>
+      <ul>
+        <li>📱 Control total desde tu celular (Android / iOS)</li>
+        <li>🔧 Control manual o automático desde cualquier parte del mundo</li>
+        <li>🔋 Bajo consumo energético</li>
+        <li>🧰 Fácil instalación</li>  
+        <li>🔒 Total seguridad y privacidad</li>
+      </ul>
+    </section>
 
-    nav.main-nav ul {
-        flex-direction: column; /* Apila los links del menú en móvil */
-        margin-top: 1rem;
-    }
+    <section id="app">
+      <h2>La app</h2>
+      <p>
+        Nuestro sistema exclusivo te permite encender o programar el riego desde cualquier lugar, incluso si estás de vacaciones.
+      </p>
+      <img src="interfaz-app.jpg" alt="Captura de la app" width="300" />
+      <br>
+      <img src="zonaActivada.jpeg" alt="Zona activada en interfaz de la app" width="300">
+      <br>
+      <img src="aspersoresRegando.jpeg" alt="Imagen real de aspersores funcionando" width="300">
+    </section>
 
-    nav.main-nav ul li {
-        margin-left: 0;
-        margin-bottom: 0.5rem;
-    }
+    <section id="contacto">
+      <h2>¿Querés uno?</h2>
+      <p>Escribime para más información al email o al whatsapp:</p>
+      <p><strong>Email:</strong> ramirosaravia14@gmail.com</p>
+    </section>
+  </main>
 
-    /* Ajuste para el padding del header en móvil para que no sea excesivo */
-    header {
-        padding: 1rem 1rem;
-    }
-}
+  <footer>
+    <p>&copy; 2025 Ramiro Saravia - Todos los derechos reservados</p>
+  </footer>
 
-/* --- Estilo para el ENCABEZADO DENTRO DE MAIN (TÍTULO PRINCIPAL) --- */
-.main-page-header {
-    background: #2e8b57; /* El verde original de SmartRiego, más claro */
-    color: white;
-    text-align: center;
-    padding: 3rem 2rem; /* Más padding para que el título respire */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Incluye padding en el ancho total */
-}
-
-.main-page-header h1 {
-    font-size: 2.8em; /* Tamaño del título principal */
-    margin-bottom: 0.5rem;
-}
-
-.main-page-header p {
-    font-size: 1.2em;
-    opacity: 0.9;
-}
-
-/* --- MEDIA QUERY para main-page-header en pantallas más grandes (PC) --- */
-@media (min-width: 768px) {
-    .main-page-header h1 {
-        font-size: 3.5em; /* Título aún más grande en PC */
-    }
-
-    .main-page-header p {
-        font-size: 1.5em; /* Subtítulo más grande en PC */
-    }
-}
-
-
-/* --- SECCIONES PRINCIPALES --- */
-/* Eliminamos los estilos directos de 'main' para permitir que el header .main-page-header tome todo el ancho */
-main {
-    padding: 0; /* Asegura que el main no tenga padding que limite el ancho de main-page-header */
-    margin: 0; /* Elimina márgenes externos del main */
-    max-width: none; /* Permite que main se extienda al 100% */
-}
-
-/* Las secciones individuales ahora tienen su propio ancho máximo y centrado */
-section {
-    margin-bottom: 2rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
-    max-width: 960px; /* Aquí establecemos el ancho máximo para el contenido de las secciones */
-    margin-left: auto; /* Centra la sección */
-    margin-right: auto; /* Centra la sección */
-}
-
-section:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* --- LISTAS Y ÍCONOS (VENTAJAS DEL SISTEMA) --- */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li i {
-    margin-right: 0.7rem;
-    color: #2e8b57;
-    font-size: 1.1em;
-    min-width: 1.2em;
-    text-align: center;
-}
-
-
-/* --- IMÁGENES DE LA APP --- */
-#app img {
-    max-width: 100%; /* Asegura que las imágenes no se salgan de su contenedor */
-    height: auto;    /* Mantiene la proporción */
-    display: block;  /* Para que 'margin: auto' funcione */
-    margin: 1rem auto; /* Centra las imágenes dentro de su sección */
-}
-
-/* --- BOTONES --- */
-.whatsapp-btn,
-.boton-principal,
-.whatsapp-float {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-btn {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.whatsapp-btn:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.03);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.whatsapp-float svg {
-    width: 32px;
-    height: 32px;
-}
-
-.whatsapp-float:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.boton-principal {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.boton-principal:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.03);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* --- FOOTER --- */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #eee;
-}
+  <!-- Botón flotante de WhatsApp con mensaje predefinido -->
+  <a href="https://wa.me/5491173685709?text=Hola%2C%20quiero%20mas%20informacion%20acerca%20del%20controlador%20de%20riego%20Wi-fi"
+     class="whatsapp-float" target="_blank" title="Hablá por WhatsApp" aria-label="Hablá por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="white">
+      <path d="M16 0C7.164 0 0 7.163 0 16c0 2.819.73 5.455 2.006 7.772L0 32l8.406-2.195C10.615 30.26 13.24 31 16 31c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29c-2.473 0-4.799-.68-6.789-1.859l-.484-.287-4.988 1.303 1.33-4.757-.316-.5C3.657 21.053 3 18.584 3 16 3 8.832 8.832 3 16 3s13 5.832 13 13-5.832 13-13 13zm7.266-9.402c-.399-.199-2.367-1.172-2.734-1.305-.367-.134-.635-.2-.902.199-.267.4-1.035 1.305-1.268 1.57-.233.267-.467.3-.866.1-.4-.2-1.692-.622-3.222-1.984-1.191-1.062-1.996-2.372-2.23-2.771-.233-.4-.025-.616.175-.816.179-.178.4-.466.6-.7.2-.234.266-.4.4-.667.134-.267.067-.5-.033-.7-.1-.2-.902-2.183-1.234-2.99-.324-.779-.654-.675-.902-.688l-.767-.014c-.267 0-.7.1-1.066.5-.367.4-1.4 1.367-1.4 3.334 0 1.967 1.433 3.864 1.633 4.133.2.267 2.826 4.3 6.85 6.034.958.412 1.7.659 2.283.844.959.306 1.83.262 2.517.159.768-.114 2.367-.966 2.702-1.899.334-.934.334-1.734.234-1.899-.1-.167-.366-.267-.766-.467z"/>
+    </svg>
+  </a>
+</body>
+</html>
