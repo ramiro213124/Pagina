@@ -84,9 +84,8 @@ nav.main-nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 3rem 2rem; /* Más padding para que el título respire */
-    /* Estas propiedades ya lo hacen ocupar todo el ancho por defecto */
-    /* max-width: none;  <-- No es necesario, un div por defecto ocupa el 100% */
-    /* margin: 0;        <-- No es necesario, un div por defecto no tiene margen externo */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
 }
 
 .main-page-header h1 {
@@ -112,13 +111,14 @@ nav.main-nav ul li a:hover {
 
 
 /* --- SECCIONES PRINCIPALES --- */
+/* Eliminamos los estilos directos de 'main' para permitir que el header .main-page-header tome todo el ancho */
 main {
-    padding: 0; /* Quitamos el padding global de main para que .main-page-header ocupe el 100% */
-    max-width: none; /* Asegura que main pueda expandirse completamente */
-    margin: 0; /* Elimina margen de main */
+    padding: 0; /* Asegura que el main no tenga padding que limite el ancho de main-page-header */
+    margin: 0; /* Elimina márgenes externos del main */
+    max-width: none; /* Permite que main se extienda al 100% */
 }
 
-/* Las secciones internas ahora tendrán su propio max-width y margin para centrarse */
+/* Las secciones individuales ahora tienen su propio ancho máximo y centrado */
 section {
     margin-bottom: 2rem;
     background: white;
@@ -126,7 +126,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     transition: box-shadow 0.3s ease;
-    max-width: 960px; /* Ancho máximo para el contenido de las secciones */
+    max-width: 960px; /* Aquí establecemos el ancho máximo para el contenido de las secciones */
     margin-left: auto; /* Centra la sección */
     margin-right: auto; /* Centra la sección */
 }
@@ -152,10 +152,10 @@ ul li i {
 
 /* --- IMÁGENES DE LA APP --- */
 #app img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
+    max-width: 100%; /* Asegura que las imágenes no se salgan de su contenedor */
+    height: auto;    /* Mantiene la proporción */
+    display: block;  /* Para que 'margin: auto' funcione */
+    margin: 1rem auto; /* Centra las imágenes dentro de su sección */
 }
 
 /* --- BOTONES --- */
