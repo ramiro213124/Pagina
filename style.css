@@ -113,3 +113,71 @@ main {
     display: block; /* Removes extra space below images */
     margin: 1rem auto; /* Centers images within their container */
 }
+
+/* --- NUEVOS ESTILOS PARA EL ENCABEZADO --- */
+
+.header-content {
+    display: flex; /* Usa Flexbox para alinear elementos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente si hay espacio */
+    padding: 2rem 1rem; /* Más padding para los costados en móvil */
+    text-align: center; /* Asegura que el texto dentro esté centrado */
+}
+
+.header-logo {
+    width: 80px; /* Tamaño más grande para el logo en el header */
+    height: 80px; /* Asegura que sea un cuadrado perfecto */
+    margin-bottom: 1rem; /* Espacio debajo del logo */
+    animation: bounceIn 1s ease-out; /* Agregamos una pequeña animación de entrada */
+}
+
+header h1 {
+    font-size: 2.2em; /* Haz el título un poco más grande */
+    margin-bottom: 0.5rem; /* Espacio debajo del título */
+    line-height: 1.2; /* Mejora la legibilidad en varias líneas */
+}
+
+header p {
+    font-size: 1.1em; /* Haz el subtítulo un poco más grande */
+    opacity: 0.9; /* Ligeramente más suave que el título */
+}
+
+/* Animación de entrada para el logo */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* --- Media Query para pantallas más grandes (PC) --- */
+@media (min-width: 768px) {
+    .header-content {
+        padding: 3rem 2rem; /* Más padding en PC */
+    }
+
+    .header-logo {
+        width: 100px; /* Logo un poco más grande en PC */
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 3em; /* Título aún más grande en PC */
+    }
+
+    header p {
+        font-size: 1.3em; /* Subtítulo más grande en PC */
+    }
+}
