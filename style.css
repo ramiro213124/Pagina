@@ -1,5 +1,7 @@
-﻿﻿body {
-  font-family: Arial, sans-serif;
+﻿body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
   background: #f3f3f3;
@@ -13,8 +15,27 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
 main {
   padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 section {
@@ -38,22 +59,7 @@ footer {
   text-align: center;
   padding: 1rem;
   background: #eee;
-}
-
-.whatsapp-btn {
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  margin-top: 20px;
-}
-
-.whatsapp-btn:hover {
-  background-color: #1ebe5d;
+  font-size: 0.9rem;
 }
 
 .whatsapp-float {
@@ -71,45 +77,16 @@ footer {
   z-index: 1000;
 }
 
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-}
-
 .whatsapp-float:hover {
   background-color: #1ebe5d;
 }
 
-.boton-principal {
-  display: inline-block;
-  background-color: #25D366;
-  color: white;
-  font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  margin-top: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.boton-principal:hover {
-  background-color: #1ebe5d;
-}
-
-/* Add this to your style.css */
-
-main {
-    padding: 2rem;
-    /* Add these new rules below */
-    max-width: 960px; /* Or any max-width you prefer, e.g., 1200px */
-    margin: 0 auto; /* This centers the block-level element */
-}
-
-/* Make images responsive within their containers */
 #app img {
-    max-width: 100%; /* Ensures images don't overflow their parent */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Removes extra space below images */
-    margin: 1rem auto; /* Centers images within their container */
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
