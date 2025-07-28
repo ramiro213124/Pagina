@@ -1,179 +1,115 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f3f3f3;
-    color: #333;
+﻿﻿body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f3f3f3;
+  color: #333;
 }
 
-/* --- ESTILOS GENERALES DEL HEADER --- */
 header {
-    background: #2e8b57;
-    color: white;
-    padding: 2rem 1rem; /* Padding para el header completo */
-    text-align: center; /* Centra el texto del header */
+  background: #2e8b57;
+  color: white;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* El header-text-content ahora contendrá todo el header */
-.header-text-content {
-    max-width: 960px; /* Limita el ancho del contenido del header en pantallas grandes */
-    margin: 0 auto; /* Centra el contenido del header */
-    /* text-align: center; /* Esto ya lo maneja el 'header' directamente, pero no estorba */
-}
-
-header h1 {
-    font-size: 2.2em; /* Tamaño del título en móvil */
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
-
-header p {
-    font-size: 1.1em; /* Tamaño del subtítulo en móvil */
-    opacity: 0.9;
-}
-
-/* --- Media Query para pantallas más grandes (PC) --- */
-@media (min-width: 768px) {
-    header {
-        padding: 3rem 2rem; /* Más padding para el header en PC */
-    }
-
-    header h1 {
-        font-size: 3em; /* Título más grande en PC */
-    }
-
-    header p {
-        font-size: 1.3em; /* Subtítulo más grande en PC */
-    }
- 
-    /* Ajustes para el MAIN en PC (mantienes los que ya tenías) */
-    main {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 2rem;
-    }
-}
-
-
-/* --- SECCIONES PRINCIPALES --- */
 main {
-    padding: 2rem; /* Mantén el padding actual para móvil */
+  padding: 2rem;
 }
 
 section {
-    margin-bottom: 2rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease; /* Transición para efecto hover en secciones */
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-section:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra más grande al pasar el ratón */
-}
-
-/* --- LISTAS Y ÍCONOS (VENTAJAS DEL SISTEMA) --- */
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
-/* Estilo para los íconos de Font Awesome en las listas */
-ul li i {
-    margin-right: 0.7rem; /* Espacio entre el ícono y el texto */
-    color: #2e8b57;       /* Le da a los íconos el color verde de tu encabezado */
-    font-size: 1.1em;     /* Un poco más grande que el texto */
-    min-width: 1.2em;     /* Asegura que todos los íconos tengan el mismo ancho para una mejor alineación */
-    text-align: center;   /* Centra el ícono dentro de su min-width */
-}
-/* Asegúrate de ELIMINAR la siguiente regla si existe en tu CSS: */
-/* ul li::before {
-    content: "✅ ";
-} */
-
-
-/* --- IMÁGENES DE LA APP --- */
-#app img {
-    max-width: 100%; /* Las imágenes no se desbordan */
-    height: auto;    /* Mantiene la proporción */
-    display: block;  /* Para que `margin: auto` funcione */
-    margin: 1rem auto; /* Centra las imágenes */
+ul li::before {
+  content: "✅ ";
 }
 
-/* --- BOTONES --- */
-.whatsapp-btn,
-.boton-principal,
-.whatsapp-float {
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones para todos los elementos interactivos */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
 }
 
 .whatsapp-btn {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px;
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .whatsapp-btn:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.03); /* Ligeramente más grande */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  background-color: #1ebe5d;
 }
 
 .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.whatsapp-float svg { /* Estilo para el SVG, no para la etiqueta <img> */
-    width: 32px;
-    height: 32px;
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
 }
 
 .whatsapp-float:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.08); /* Ligeramente más grande */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  background-color: #1ebe5d;
 }
 
 .boton-principal {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .boton-principal:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.03); /* Ligeramente más grande */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  background-color: #1ebe5d;
 }
 
-/* --- FOOTER --- */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #eee;
+/* Add this to your style.css */
+
+main {
+    padding: 2rem;
+    /* Add these new rules below */
+    max-width: 960px; /* Or any max-width you prefer, e.g., 1200px */
+    margin: 0 auto; /* This centers the block-level element */
+}
+
+/* Make images responsive within their containers */
+#app img {
+    max-width: 100%; /* Ensures images don't overflow their parent */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra space below images */
+    margin: 1rem auto; /* Centers images within their container */
 }
